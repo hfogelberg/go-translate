@@ -23,7 +23,7 @@ func main() {
 	fmt.Println(*tl)
 
 	apiKey := os.Getenv("GOOGLE_API_KEY")
-	log.Printf("Key: %s", apiKey)
+
 	client, err := translate.NewClient(ctx, option.WithAPIKey(apiKey))
 	if err != nil {
 		log.Fatalf("Failed to create client: %v", err)
